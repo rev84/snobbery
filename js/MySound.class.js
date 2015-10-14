@@ -6,10 +6,13 @@ MySound = (function() {
   MySound.prototype.CONFIG = {
     filename: './snoberry.ogg',
     fps: 60,
-    fftSize: 128
+    fftSize: 128,
+    startSec: 2
   };
 
   MySound.prototype.isLoaded = false;
+
+  MySound.prototype.isReady = false;
 
   MySound.prototype.isPlaying = false;
 
@@ -38,8 +41,10 @@ MySound = (function() {
   MySound.prototype.createCanvas = function() {
     var ctx;
     this.canvas = document.getElementById('canvas');
+    this.canvas.width = $(window).width();
+    this.canvas.height = $(window).height();
     ctx = this.getCanvasContext();
-    return this.fillRect(0, 0);
+    return this.fillRect(0, 0, null, null, '#000000');
   };
 
   MySound.prototype.createManager = function() {
@@ -65,31 +70,40 @@ MySound = (function() {
   };
 
   MySound.prototype.onEnterFrame = function() {
-    var dat, h, i, j, myHeight, ref, w, widthArray, widthCount;
+    var dat, h, i, j, myHeight, ref, results, w, widthArray, widthCount;
     if (!this.isLoaded) {
       return;
     }
-    if (this.isPlaying) {
-      this.putLyric();
-      dat = this.manager.analysers.bgm.getByteFrequencyData();
-      this.canvas.width = $(window).width();
-      this.canvas.height = $(window).height();
-      w = canvas.width;
-      h = canvas.height;
-      this.fillRect(0, 0, null, null, '#000000');
-      widthArray = this.getWidthArray(dat.length, w);
-      widthCount = 0;
-      for (i = j = 0, ref = dat.length; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {
-        myHeight = h * dat[i] / 255;
-        this.fillRect(widthCount, h - myHeight, widthArray[i], myHeight, '#ffffff');
-        widthCount += widthArray[i];
-      }
-    } else {
-      this.isPlaying = true;
-      this.manager.play('bgm');
-      this.startTime = +new Date();
+    if (!this.isReady) {
+      this.isReady = true;
+      setTimeout((function(_this) {
+        return function() {
+          _this.startTime = +new Date();
+          _this.isPlaying = true;
+          return _this.manager.play('bgm');
+        };
+      })(this), this.CONFIG.startSec * 1000);
+      return;
     }
-    return true;
+    if (!this.isPlaying) {
+      return;
+    }
+    this.putLyric();
+    dat = this.manager.analysers.bgm.getByteFrequencyData();
+    this.canvas.width = $(window).width();
+    this.canvas.height = $(window).height();
+    w = canvas.width;
+    h = canvas.height;
+    this.fillRect(0, 0, null, null, '#000000');
+    widthArray = this.getWidthArray(dat.length, w);
+    widthCount = 0;
+    results = [];
+    for (i = j = 0, ref = dat.length; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {
+      myHeight = h * dat[i] / 255;
+      this.fillRect(widthCount, h - myHeight, widthArray[i], myHeight, '#ffffff');
+      results.push(widthCount += widthArray[i]);
+    }
+    return results;
   };
 
   MySound.prototype.fillRect = function(x, y, w, h, color) {
@@ -150,7 +164,7 @@ MySound = (function() {
     nowTime = +new Date();
     if (nowTime - this.startTime > time) {
       window.LYRICS.shift();
-      lyricSpan = $('<div>').addClass('lyrics').html(lyric.replace(/\s/g, '&nbsp;'));
+      lyricSpan = $('<div>').addClass('lyric').html(lyric.replace(/\s/g, '&nbsp;'));
       return lyricSpan.appendTo("#lyrics").hide().fadeIn(1000);
     }
   };

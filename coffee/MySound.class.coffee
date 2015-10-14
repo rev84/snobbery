@@ -3,8 +3,10 @@ class MySound
     filename : './snoberry.ogg'
     fps : 60
     fftSize : 128
+    startSec : 2
 
   isLoaded  : false
+  isReady   : false
   isPlaying : false
   canvas    : null
   manager   : null
@@ -22,8 +24,10 @@ class MySound
     )
   createCanvas:()->
     @canvas = document.getElementById('canvas')
+    @canvas.width = $(window).width()
+    @canvas.height = $(window).height()
     ctx = @getCanvasContext()
-    @fillRect 0, 0, 
+    @fillRect 0, 0, null, null, '#000000'
 
   createManager:()->
     @manager = new AudioManager(
@@ -37,31 +41,39 @@ class MySound
   onLoaded:()=>
     @isLoaded = true
   onEnterFrame:()=>
-    return unless @isLoaded
-    if @isPlaying
-      # 歌詞を置く
-      @putLyric()
+    if not @isLoaded
+      return
+    if not @isReady
+      @isReady = true
+      setTimeout(
+        =>
+          @startTime = +new Date()
+          @isPlaying = true
+          @manager.play 'bgm'
+        @CONFIG.startSec * 1000
+      )
+      return
+    if not @isPlaying
+      return
 
-      dat = @manager.analysers.bgm.getByteFrequencyData()
-      @canvas.width = $(window).width();
-      @canvas.height = $(window).height();
-      
-      w = canvas.width
-      h = canvas.height
+    # 歌詞を置く
+    @putLyric()
 
-      @fillRect 0, 0, null, null, '#000000'
+    dat = @manager.analysers.bgm.getByteFrequencyData()
+    @canvas.width = $(window).width()
+    @canvas.height = $(window).height()
+    
+    w = canvas.width
+    h = canvas.height
 
-      widthArray = @getWidthArray(dat.length, w)
-      widthCount = 0
-      for i in [0...dat.length]
-        myHeight = h*dat[i]/255
-        @fillRect widthCount, h-myHeight, widthArray[i], myHeight, '#ffffff'
-        widthCount += widthArray[i]
-    else
-      @isPlaying = true
-      @manager.play 'bgm'
-      @startTime = +new Date()
-    return true
+    @fillRect 0, 0, null, null, '#000000'
+
+    widthArray = @getWidthArray(dat.length, w)
+    widthCount = 0
+    for i in [0...dat.length]
+      myHeight = h*dat[i]/255
+      @fillRect widthCount, h-myHeight, widthArray[i], myHeight, '#ffffff'
+      widthCount += widthArray[i]
 
   fillRect:(x, y, w, h, color)->
     w = @canvas.width if w is null
@@ -87,7 +99,7 @@ class MySound
     shuffle = (array)->
       n = array.length
       while n
-        i = Math.floor(Math.random() * n--);
+        i = Math.floor(Math.random() * n--)
         [array[n], array[i]] = [array[i], array[n]]
       array
     plus1 = shuffle plus1
@@ -95,11 +107,12 @@ class MySound
     res = []
     res.push(baseW+plus1[i]) for i in [0...canvasWidth]
     @widthArray = res
+
   putLyric:()->
     return if window.LYRICS.length is 0
     [time, lyric] = window.LYRICS[0]
     nowTime = +new Date()
     if nowTime - @startTime > time
       window.LYRICS.shift()
-      lyricSpan = $('<div>').addClass('lyrics').html(lyric.replace(/\s/g, '&nbsp;'))
+      lyricSpan = $('<div>').addClass('lyric').html(lyric.replace(/\s/g, '&nbsp;'))
       lyricSpan.appendTo("#lyrics").hide().fadeIn(1000)   
