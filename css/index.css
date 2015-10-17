@@ -29,3 +29,10 @@ div.lyric {
   font-family: 'Noto Sans Japanese', 'Montserrat', sans-serif;
   font-weight: 700;
 }
+div#volumeForm {
+  position:absolute;
+  z-index:1000;
+  top:0;right:0;
+  margin:0; padding:0;
+  opacity:0;
+}

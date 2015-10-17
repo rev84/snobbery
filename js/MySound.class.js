@@ -4,7 +4,7 @@ var MySound,
 
 MySound = (function() {
   MySound.prototype.CONFIG = {
-    filename: './snoberry.ogg',
+    filename: './snobbery.ogg',
     fps: 60,
     fftSize: 128,
     startSec: 2
@@ -24,19 +24,37 @@ MySound = (function() {
 
   MySound.prototype.widthArray = null;
 
+  MySound.prototype.resizeTimer = false;
+
   function MySound() {
     this.onEnterFrame = bind(this.onEnterFrame, this);
     this.onLoaded = bind(this.onLoaded, this);
+    this.onResize = bind(this.onResize, this);
     this.createCanvas();
     this.createManager();
     this.manager.load({
       bgm: {
         path: this.CONFIG.filename,
         loop: false,
-        fftSize: this.CONFIG.size
+        fftSize: this.CONFIG.size,
+        gain: 'bgm',
+        volume: $('#volume').val()
       }
     });
+    $(window).resize(this.onResize);
   }
+
+  MySound.prototype.onResize = function() {
+    if (this.resizeTimer !== false) {
+      clearTimeout(this.resizeTimer);
+    }
+    return this.resizeTimer = setTimeout((function(_this) {
+      return function() {
+        _this.widthArray = null;
+        return _this.resizeTimer = false;
+      };
+    })(this), 100);
+  };
 
   MySound.prototype.createCanvas = function() {
     var ctx;
@@ -76,6 +94,7 @@ MySound = (function() {
     }
     if (!this.isReady) {
       this.isReady = true;
+      this.setVolume($('#volume').val());
       setTimeout((function(_this) {
         return function() {
           _this.startTime = +new Date();
@@ -167,6 +186,10 @@ MySound = (function() {
       lyricSpan = $('<div>').addClass('lyric').html(lyric.replace(/\s/g, '&nbsp;'));
       return lyricSpan.appendTo("#lyrics").hide().fadeIn(1000);
     }
+  };
+
+  MySound.prototype.setVolume = function(volume) {
+    return this.manager.setVolume('bgm', volume);
   };
 
   return MySound;

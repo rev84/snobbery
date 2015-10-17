@@ -1,6 +1,6 @@
 class MySound
   CONFIG:
-    filename : './snoberry.ogg'
+    filename : './snobbery.ogg'
     fps : 60
     fftSize : 128
     startSec : 2
@@ -12,6 +12,7 @@ class MySound
   manager   : null
   startTime : null
   widthArray : null
+  resizeTimer : false
 
   constructor:()->
     @createCanvas()
@@ -21,6 +22,18 @@ class MySound
         path : @CONFIG.filename
         loop : false
         fftSize: @CONFIG.size
+        gain : 'bgm'
+        volume : $('#volume').val()
+    )
+    $(window).resize @onResize
+
+  onResize:()=>
+    clearTimeout @resizeTimer if @resizeTimer isnt false
+    @resizeTimer = setTimeout(
+      =>
+        @widthArray = null
+        @resizeTimer = false
+      100
     )
   createCanvas:()->
     @canvas = document.getElementById('canvas')
@@ -45,6 +58,9 @@ class MySound
       return
     if not @isReady
       @isReady = true
+      # ボリューム
+      @setVolume $('#volume').val()
+
       setTimeout(
         =>
           @startTime = +new Date()
@@ -115,4 +131,7 @@ class MySound
     if nowTime - @startTime > time
       window.LYRICS.shift()
       lyricSpan = $('<div>').addClass('lyric').html(lyric.replace(/\s/g, '&nbsp;'))
-      lyricSpan.appendTo("#lyrics").hide().fadeIn(1000)   
+      lyricSpan.appendTo("#lyrics").hide().fadeIn(1000)
+
+  setVolume:(volume)->
+    @manager.setVolume 'bgm', volume
