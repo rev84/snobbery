@@ -17,5 +17,11 @@ $().ready(function() {
       return $(this).fadeTo(1000, 0.01);
     }
   });
-  return window.mysound = new MySound();
+  $('#play').on('click', function() {
+    $('#playForm').addClass('noDisplay');
+    return window.mysound = new MySound();
+  });
+  return window.onerror = function(e) {
+    return alert(e);
+  };
 });

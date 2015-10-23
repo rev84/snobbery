@@ -36,3 +36,18 @@ div#volumeForm {
   margin:0; padding:0;
   opacity:0;
 }
+div#playForm {
+  position:fixed;
+  z-index:10000;
+  width:100%; height:100%;
+  text-align:center; vertical-align: middle;
+  margin:0; padding:0;
+  top:0;left:0;
+}
+span#play {
+  width:30%;height:30%;
+  font-size:2000%;
+}
+.noDisplay {
+  display:none;
+}

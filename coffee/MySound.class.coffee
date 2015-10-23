@@ -1,6 +1,6 @@
 class MySound
   CONFIG:
-    filename : './snobbery.ogg'
+    filename : './snobbery.mp3'
     fps : 60
     fftSize : 128
     startSec : 2
