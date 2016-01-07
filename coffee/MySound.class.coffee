@@ -130,7 +130,8 @@ class MySound
     nowTime = +new Date()
     if nowTime - @startTime > time
       window.LYRICS.shift()
-      lyricSpan = $('<div>').addClass('lyric').html(lyric.replace(/\s/g, '&nbsp;'))
+      #lyric = lyric.replace(/\s/g, '&nbsp;')
+      lyricSpan = $('<div>').addClass('lyric').html(lyric)
       lyricSpan.appendTo("#lyrics").hide().fadeIn(1000)
 
   setVolume:(volume)->

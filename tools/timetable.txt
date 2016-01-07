@@ -1,7 +1,7 @@
 1000	so
 2304	frameworks say
 3936	"nerf blitzcrank,
-5672	　shot my head"
+5672	&nbsp;shot my head"
 7592	though their souls
 9480	float mousses dude
 11257	rainbow u
@@ -12,23 +12,23 @@
 20578	存在しない
 22441	運命の
 24409	平行四辺
-26161	平然と
+26161	整然と
 28082	悪辣な
 29898	snobbery
-30918	　
-31938	　
-32958	　
-33978	スノバリー / Garbage Collection
-34998	　
-36018	　
-37038	　
-38058	Music, Lyrics : Revin
-39078	　
-40098	　
-41118	Arrangement : KEEL
-42138	　
-43158	　
-44178	　
+31398	&nbsp;
+32344	&nbsp;
+33290	&nbsp;
+34236	スノバリー / Garbage Collection
+35183	&nbsp;
+36129	&nbsp;
+37075	&nbsp;
+38021	Music, Lyrics : Revin <a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a>
+38967	&nbsp;
+39913	&nbsp;
+40860	Arrangement : KEEL <a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a>
+41806	&nbsp;
+42752	&nbsp;
+43698	&nbsp;
 45198	物語る
 47462	ことなど
 48861	何もないな
@@ -47,15 +47,16 @@
 68461	ない
 69317	感想が
 70918	積み上がってくよ
-74018	　
+74018	&nbsp;
 74518	時の流れは
 76798	何もかも
 78142	逓減していくけど
 81574	そんなことは
 83230	どうでもいいから
 85518	なんか盛り上がりたいね
-89014	ああ
-90678	頼りたい！
+87514	&nbsp;
+89014	でも
+90678	頼りない！
 91878	ドラマツルギー
 93134	わりと
 93742	晦渋なやつを
@@ -75,19 +76,20 @@
 109558	♪♪♪
 111102	♪♪
 111798	♪
-113156	　
-114514	　
-115872	　
-117230	　
-118588	　
-119946	　
-121304	　
+113156	&nbsp;
+114514	&nbsp;
+115872	&nbsp;
+117230	&nbsp;
+118588	&nbsp;
+119946	&nbsp;
+121304	&nbsp;
 122662	ああ
 123110	アプレゲールな哀しみに
 125222	ぜんぶ収斂してんだ
 127158	この世界
 128350	泥臭いアルゴリズムで
 130534	ひも解くしかない
+131830	&nbsp;
 132030	105GBの
 133406	塊を
 134501	ちゃんと
@@ -109,3 +111,35 @@
 149197	竜気ないじゃない
 150517	みんな
 151109	死ぬしかないんじゃない？
+152644	♪♪♪♪
+153373	♪♪♪♪♪
+155309	♪♪♪♪
+155966	♪♪♪
+157877	♪♪♪♪
+158637	♪♪♪♪♪
+160597	♪♪♪♪
+161133	♪♪♪
+162677	♪♪
+163373	♪
+164473	<a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a>
+165057	<a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a>
+165689	<a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a>
+166393	<a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a>
+167236	<a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a>
+167737	<a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a>
+168361	<a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a>
+169098	<a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a>
+169906	<a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a>
+170394	<a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a>
+171042	<a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a>
+171690	<a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a>
+172554	<a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a>
+173530	<a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a>
+174506	<a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a><a href="https://twitter.com/rev84" target="_blank"><img src="img/matui.png"></a>
+174874	<a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a><a href="https://twitter.com/le_le_91" target="_blank"><img src="img/keel.jpeg"></a>
+175249	&nbsp;
+176249	&nbsp;
+177249	&nbsp;
+178249	&nbsp;
+179249	&nbsp;
+180249	&nbsp;
